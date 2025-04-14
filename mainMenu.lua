@@ -4,7 +4,7 @@ while true do
     print("Choose a game to play:")
     print("1. Wordle")
     print("2. Higher or Lower (Cards)/Number Guessing Game")
-    print("3. Quiz Game")
+    print("3. Trivia Game")
     print("4. Rock Paper Scissors")
     print("5. Tic Tac Toe")
     print("6. Exit")
@@ -19,7 +19,7 @@ while true do
         dofile("HigherLower.lua")
     elseif choice == 3 then
         -- Play Quiz Game
-        dofile("quiz_game.lua")
+        dofile("trivia_game.lua")
     elseif choice == 4 then
         -- Play Rock Paper Scissors
         dofile("rock_paper_scissors.lua")
@@ -32,4 +32,5 @@ while true do
     else
         print("Invalid choice. Please select a number between 1 and 7.")
     end
+    break
 end
