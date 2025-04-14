@@ -63,7 +63,7 @@ while true do
         playNumberGuess()
     elseif choice == 3 then
         print("Thanks for playing!")
-        break
+        dofile("mainMenu.lua")
     else
         print("Invalid choice, please select 1, 2, or 3.")
     end
