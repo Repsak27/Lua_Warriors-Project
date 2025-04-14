@@ -72,12 +72,12 @@ while true do
         if checkWinner() then
             printGameBoard()
             print("Player " .. currentPlayer .. " wins!")
-            break
+            dofile("mainMenu.lua")
         end
         if checkTie() then
             printGameBoard()
             print("It's a tie!")
-            break
+            dofile("mainMenu.lua")
         end
         if currentPlayer == "X" then
             currentPlayer = "O"
