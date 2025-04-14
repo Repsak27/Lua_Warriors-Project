@@ -77,3 +77,4 @@ while playing do
 end
 
 print("Thanks for playing!")
+dofile("mainMenu.lua")
