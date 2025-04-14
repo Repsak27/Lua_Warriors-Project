@@ -1,7 +1,7 @@
 math.randomseed(os.time())
 
 --Word Bank
-local dictionary = {"apple", "grape", "mango", "peach", "berry"}
+local dictionary = {"apple", "grape", "mango", "peach", "berry", "album", "north", "music", "river", "water", "field", "color", "video", "party", "image", "coach", "march", "state", "zebra", "state", "april", "squat", "point", "major", "boxer", "above"}
 local secret_word = dictionary[math.random(#dictionary)]
 local max_attempts = 6
 
@@ -58,10 +58,12 @@ for attempt = 1, max_attempts do
 
         if guess == secret_word then
             print("Congratulations! You guessed the word correctly.")
-            return 
+            dofile("mainMenu.lua") 
         end
     end
 end 
 
 --End of Game print statement
 print("Game Over! The correct word was: ".. secret_word)
+
+dofile("mainMenu.lua")
