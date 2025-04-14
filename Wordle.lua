@@ -2,7 +2,7 @@ math.randomseed(os.time())
 
 --Word Bank
 local dictionary = {"apple", "grape", "mango", "peach", "berry"}
-local secret_word = dictionary[math.random(#words)]
+local secret_word = dictionary[math.random(#dictionary)]
 local max_attempts = 6
 
 local function check_guess(guess, secret)
