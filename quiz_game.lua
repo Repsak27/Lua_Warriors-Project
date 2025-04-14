@@ -40,7 +40,15 @@ while count <= 5 do
         print(count .. ". " .. quizTable[questionChoice].question)
         print(quizTable[questionChoice].options)
         print("Enter either A, B, C, or D as your answer")
-        playerAnswer = io.read()
+
+        -- input validation for playerAnswer
+        repeat
+            playerAnswer = io.read()
+            playerAnswer = string.upper(playerAnswer) -- Convert to uppercase
+            if playerAnswer ~= "A" and playerAnswer ~= "B" and playerAnswer ~= "C" and playerAnswer ~= "D" then
+                print("Invalid input. Please enter A, B, C, or D:")
+            end
+        until playerAnswer == "A" or playerAnswer == "B" or playerAnswer == "C" or playerAnswer == "D"
 
         if playerAnswer == quizTable[questionChoice].answer then
             print(playerAnswer .. " is correct!\n")
